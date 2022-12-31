@@ -7,7 +7,8 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Linkedin</title>
     <link rel="stylesheet" href="style.css">
-    <link rel="stylesheet" href="style.css">
+    
+
     <style>
         @import url('https://fonts.googleapis.com/css2?family=Cabin:wght@700&family=Poppins:ital,wght@0,300;0,400;0,800;1,300;1,400;1,800;1,900&family=Raleway:wght@300;400;500;600&display=swap');
     </style>
@@ -46,7 +47,7 @@
             </div>
         </div>
 
-        <div class="profile-menu-wrap">
+        <div class="profile-menu-wrap" id="profileMenu">
             <div class="profile-menu">
                 <div class="user-info">
                     <img src="user-1.png">
@@ -84,8 +85,6 @@
             </div>
         </div>
     </nav>
-
-
 
 
 
@@ -337,6 +336,7 @@
 
 
 
+
         <!-- Right Content -->
 
         <div class="right-sidebar">
@@ -392,7 +392,33 @@
 
 
 
+    <script>
+        let profileMenu = document.getElementById('profileMenu');
 
+        function toggleMenu() {
+            profileMenu.classList.toggle('open-menu');
+
+        }
+
+
+        let sideActivity = document.getElementById('sidebarActivity');
+        let moreLink = document.getElementById('showMoreLink');
+
+        function toggleActivity() {
+            sideActivity.classList.toggle("open-activity");
+
+
+
+
+            if (sideActivity.classList.contains("open-activity")) {
+                moreLink.innerHTML = "Show less <b>-</b>";
+            }
+            else {
+                moreLink.innerHTML = "Show more <b>+</b>";
+            }
+        }
+
+    </script>
 
 
 </body>
